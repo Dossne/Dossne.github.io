@@ -95,6 +95,12 @@ tw-link
 
 [[-&gt;]]
 
+(if: $false is 1) [
+[[заполнить1]]
+] (else:) [
+]
+
+
 
 СТАТУСНАЯ СТРОКА?</tw-passagedata><tw-passagedata pid="5" name="Вечное рабство" tags="" position="556,565">Итог: &lt;font color=&quot;red&quot;&gt;гулификация&lt;/font&gt;
 
@@ -123,8 +129,7 @@ tw-link
 
 [[Оставить без сознания &lt;small&gt;(+милосердие)&lt;/small&gt;-&gt;Лестница: милосердие и беспечность]]
 
-[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to (random:350,500))
-Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to (random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Собрав все монетки до последней и потратив немного времени, вы также прихватываете с собой меч стражника.
 
@@ -165,9 +170,17 @@ tw-link
 Вы вламываетесь в зал и видите, как две тощие фигуры в центре зала испуганно оглядываются на вас, и одна из них начинает пятиться к лестнице наверх.
 
 (set: $moneyDif to (random: 120, 160))
-На земле валяется (link: &quot;кошелёк&quot;) [кошелёк `[+`$moneyDif`$]`. (set:$money to $money+$moneyDif)]
+На земле валяется (link: &quot;кошелёк&quot;) [кошелёк `[вы забираете: `$moneyDif`$]`. (set:$money to $money+$moneyDif)]
 
-Рядом с дверью, из которой вы пришли, дремал стражник, но сейчас он проснулся и, недоуменно моргая, смотрит на вас.</tw-passagedata><tw-passagedata pid="13" name="Лестница: милосердие и практичность" tags="" position="873,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+Рядом с дверью, из которой вы пришли, дремал стражник, но сейчас он проснулся и, недоуменно моргая, смотрит на вас.
+
+[[Прикончить стражника пока не поздно-&gt;Большой зал: осталось двое]]
+
+(if: $false is 1) [
+[[действие-&gt;заполнить2]]
+] (else:) [
+]
+</tw-passagedata><tw-passagedata pid="13" name="Лестница: милосердие и практичность" tags="" position="873,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Связав стражника за спиной по диагонали за руки и за ноги, вы учитываете урок того, что вас связали недостаточно тщательно. Вы также прихватываете с собой меч стражника.
 
@@ -183,7 +196,7 @@ tw-link
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="15" name="Лестница: жестокость и практичность" tags="" position="1187,722">Итог: +&lt;font color=&quot;green&quot;&gt;жестокость&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;пятна крови на руках и одежде&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="15" name="Лестница: жестокость и практичность" tags="" position="1187,722">Итог: +&lt;font color=&quot;green&quot;&gt;жестокость&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;пятна крови на руках и одежде&lt;/font&gt;(set: $blooded to 1), +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt; 
 
 Понимая, что это необходимость, вы подходите к лежащему на полу стражнику и вынимаете меч из его ножен. А затем заставляете его навсегда затихнуть. Вы также прихватываете с собой меч стражника.
 
@@ -191,7 +204,7 @@ tw-link
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="16" name="Большой зал: наблюдательная позиция" tags="" position="540,1032">Итог: +&lt;font color=&quot;green&quot;&gt;интеллект&lt;/font&gt;
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="16" name="Большой зал: наблюдательная позиция" tags="" position="548,1020">Итог: +&lt;font color=&quot;green&quot;&gt;интеллект&lt;/font&gt;
 
 Вы осторожно заходите в зал, когда две тощие фигуры в центре зала не смотрят в вашу сторону, и они продолжают заниматься своими делами.
 
@@ -202,10 +215,9 @@ tw-link
 [[Громко заорать — повинуясь странной силе, вы выходите из себя &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
 
 (if: $false is 1) [
-[[нужны ответы]]
+[[действие-&gt;заполнить1]]
 ] (else:) [
-]
-</tw-passagedata><tw-passagedata pid="17" name="Большой зал: под прикрытием храпа" tags="" position="705,1028">Итог: +&lt;font color=&quot;green&quot;&gt;восприятие&lt;/font&gt;восприятие
+]</tw-passagedata><tw-passagedata pid="17" name="Большой зал: под прикрытием храпа" tags="" position="705,1028">Итог: +&lt;font color=&quot;green&quot;&gt;восприятие&lt;/font&gt;
 
 Вы заходите в зал под аккомпанемент дикого храпа и видите, как две тощие фигуры в центре зала испуганно оглядываются на вас, и одна из них начинает пятиться к лестнице наверх.
 
@@ -216,10 +228,9 @@ tw-link
 [[Громко заорать — повинуясь странной силе, вы выходите из себя &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
 
 (if: $false is 1) [
-[[нужны ответы]]
+[[действие-&gt;заполнить1]]
 ] (else:) [
-]
-</tw-passagedata><tw-passagedata pid="18" name="Untitled Passage" tags="" position="212,235">Учит выбору</tw-passagedata><tw-passagedata pid="19" name="Untitled Passage 1" tags="" position="210,411">Учит итогу разноцветному</tw-passagedata><tw-passagedata pid="20" name="Untitled Passage 2" tags="" position="203,573">Учит осмотру
+]</tw-passagedata><tw-passagedata pid="18" name="Untitled Passage" tags="" position="212,235">Учит выбору</tw-passagedata><tw-passagedata pid="19" name="Untitled Passage 1" tags="" position="210,411">Учит итогу разноцветному</tw-passagedata><tw-passagedata pid="20" name="Untitled Passage 2" tags="" position="203,573">Учит осмотру
 </tw-passagedata><tw-passagedata pid="21" name="Untitled Passage 3" tags="" position="202,729">Учит негативным последствиям выбора (оранжевый цвет)</tw-passagedata><tw-passagedata pid="22" name="Untitled Passage 4" tags="" position="67,728">Повтор обучения осмотра
 
 (Добавить награду! Переменную, денег)</tw-passagedata><tw-passagedata pid="23" name="в" tags="" position="1449,409">Выносливость
@@ -230,19 +241,11 @@ tw-link
 Практичность-беспечность</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage 7" tags="" position="1454,1078">Восприятие
 Интеллект
 Беспечность
-Время</tw-passagedata><tw-passagedata pid="27" name="нужны ответы" tags="" position="232,1026">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="FancySyntax" tags="" position="1255,29">(set: $money to 276)
-(set: $currentHP to 8)
-(set: $maxHP to 10)
-(set: $exp to 750)
-(set: $mana to 3)
-
-(print: $red)
+Время</tw-passagedata><tw-passagedata pid="27" name="заполнить1" tags="" position="230,1024">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="FancySyntax" tags="" position="1257,31">(set: $money to 276)(set: $currentHP to 8)(set: $maxHP to 10)(set: $exp to 750)(set: $mana to 3)(print: $red)
 (either: 1, 2, &quot;жук&quot;)
-
 |foo&gt;[Red]
-(click: ?foo) [Blue]
-
-(link: &quot;Red&quot;) [Red (set:$money to $money+1) money $money]
+(click: ?foo)[Blue]
+(link: &quot;Red&quot;)[Red (set:$money to $money+1) money $money]
 (print: $money)
 
 (if: $red is 1) [
@@ -251,7 +254,53 @@ tw-link
 
 (display: &quot;StatusBar&quot;)
 
-(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;)</tw-passagedata><tw-passagedata pid="29" name="Untitled Passage 8" tags="" position="199,866">ДОБАВИТЬ ОПАСНЫЙ ИНТЕРАКТИВНЫЙ ТЕКСТ</tw-passagedata><tw-passagedata pid="30" name="Ударить поддых" tags="" position="1255,179">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="Ударить по голове" tags="" position="1405,179">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Ударить по ногам" tags="" position="1555,179">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="StatusBar" tags="" position="1419,27">HP: $currentHP/$maxHP  Money: $money  ToLvl: $exp  Mana: $mana</tw-passagedata></tw-storydata>
+(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;)
+
+(set: $heartbeat to 120)
+(set: $breathing to true)
+(set: $alive to $heartbeat &gt; 0 and $breathing)
+
+You find yourself in a dark, $alive[spooky]part of the dungeon.
+$alive[You sniff the air cautiously. Ghost odours abound.]
+
+[Fie and fuggaboo!]&lt;shout|
+(click: ?shout)[(replace: ?shout)[&quot;Blast and damnation!&quot;]]
+(click: ?shout)[(replace: ?shout)[&quot;Blast and damnation!&quot;]]</tw-passagedata><tw-passagedata pid="29" name="Untitled Passage 8" tags="" position="199,866">ДОБАВИТЬ ОПАСНЫЙ ИНТЕРАКТИВНЫЙ ТЕКСТ</tw-passagedata><tw-passagedata pid="30" name="Ударить поддых" tags="" position="1255,179">(set: $false to false)
+
+(if: $inventory contains &quot;sword&quot;)[You have sword]
+
+[potion scroll bread]&lt;bagpack|
+
+You see here fire. (if: &quot;?bagpack&quot; contains &quot;potion&quot;)[Potion explodes!]
+
+?bagpack</tw-passagedata><tw-passagedata pid="31" name="Ударить по голове" tags="" position="1405,179">(set: $time to 15000ms)
+$time
+(set: $colour to (colour: blue + yellow))
+$colour[Op Op opopop]
+(colour: blue + green)[Piu]</tw-passagedata><tw-passagedata pid="32" name="Ударить по ногам" tags="" position="1555,179">Your [ballroom gown]&lt;c1| is [bright red]&lt;c2| with [silver streaks]&lt;c3|, and covered in [moonstones]&lt;c4|.
+
+(click: ?c1)[A hand-me-down from your great aunt.]
+(click: ?c2)[A garish shade, to your reckoning.]
+(click: ?c3)[Only their faint shine keeps them from being seen as grey.]
+(click: ?c4)[Dreadfully heavy, they weigh you down and make dancing arduous.]
+Разраз
+</tw-passagedata><tw-passagedata pid="33" name="StatusBar" tags="" position="1419,27">HP: $currentHP/$maxHP  Money: $money  ToLvl: $exp  Mana: $mana</tw-passagedata><tw-passagedata pid="34" name="заполнить2" tags="" position="1254,1158">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Большой зал: осталось двое" tags="" position="912,1312">Итог: +&lt;font color=&quot;orange&quot;&gt;пятна крови&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;ловкость&lt;/font&gt;
+
+Ловким движением вы приканчиваете стражника, который так и не понял, что произошло.
+
+Вы видите, что один из людей в робах уже почти у лестницы наверх, а второй достал из-за пазухи какой-то свиток и, держа его в дрожащих руках, зачитывает какие-то непонятные слова, боязливо озираясь на вас.
+
+Первый определенно может позвать кого-то на помощь, и если так, то вам не поздоровится. С другой стороны, второй может читать какое-то опасное заклинание.
+
+[[Преследовать убегающего-&gt;Большой зал: остался один... или]]
+
+[[Прервать чтение свитка-&gt;Большой зал: остался один]]
+
+(if: $false is 1) [
+[[Метнуть меч в убегающего с проверкой на ловкость-&gt;заполнить3]]
+] (else:) [
+]
+</tw-passagedata><tw-passagedata pid="36" name="Большой зал: остался один... или" tags="" position="846,1472">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Большой зал: остался один" tags="" position="1046,1476">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
