@@ -96,7 +96,7 @@ tw-link
 [[-&gt;]]
 
 (if: $false is 1) [
-[[заполнить1]]
+[[-&gt;]]
 ] (else:) [
 ]
 
@@ -129,19 +129,17 @@ tw-link
 
 [[Оставить без сознания &lt;small&gt;(+милосердие)&lt;/small&gt;-&gt;Лестница: милосердие и беспечность]]
 
-[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to (random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to it +(random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Собрав все монетки до последней и потратив немного времени, вы также прихватываете с собой меч стражника.
-
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?
+(display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
 [[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="9" name="Лестница: время деньги" tags="" position="717,714">Итог: +&lt;font color=&quot;orange&quot;&gt;0 монет&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Решив, что жизнь вам важнее горстки монет, вы также прихватываете с собой меч стражника.
-
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?
+(display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
@@ -169,9 +167,6 @@ tw-link
 
 Вы вламываетесь в зал и видите, как две тощие фигуры в центре зала испуганно оглядываются на вас, и одна из них начинает пятиться к лестнице наверх.
 
-(set: $moneyDif to (random: 120, 160))
-На земле валяется (link: &quot;кошелёк&quot;) [кошелёк `[вы забираете: `$moneyDif`$]`. (set:$money to $money+$moneyDif)]
-
 Рядом с дверью, из которой вы пришли, дремал стражник, но сейчас он проснулся и, недоуменно моргая, смотрит на вас.
 
 [[Прикончить стражника пока не поздно-&gt;Большой зал: осталось двое]]
@@ -180,27 +175,24 @@ tw-link
 [[действие-&gt;заполнить2]]
 ] (else:) [
 ]
-</tw-passagedata><tw-passagedata pid="13" name="Лестница: милосердие и практичность" tags="" position="873,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Лестница: милосердие и практичность" tags="" position="875,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Связав стражника за спиной по диагонали за руки и за ноги, вы учитываете урок того, что вас связали недостаточно тщательно. Вы также прихватываете с собой меч стражника.
-
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?
+(display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
 [[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="14" name="Лестница: милосердие и беспечность" tags="" position="1030,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Вы решаете оставить туповатого стражника без сознания: наверняка он просто служит своему господину. Вы также прихватываете с собой меч стражника.
-
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?
+(display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
 [[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="15" name="Лестница: жестокость и практичность" tags="" position="1187,722">Итог: +&lt;font color=&quot;green&quot;&gt;жестокость&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;пятна крови на руках и одежде&lt;/font&gt;(set: $blooded to 1), +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt; 
 
 Понимая, что это необходимость, вы подходите к лежащему на полу стражнику и вынимаете меч из его ножен. А затем заставляете его навсегда затихнуть. Вы также прихватываете с собой меч стражника.
-
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?
+(display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
@@ -254,7 +246,7 @@ tw-link
 
 (display: &quot;StatusBar&quot;)
 
-(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;)
+(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;, &quot;[[Ударить по щячслу]]&quot;)
 
 (set: $heartbeat to 120)
 (set: $breathing to true)
@@ -300,7 +292,16 @@ $colour[Op Op opopop]
 [[Метнуть меч в убегающего с проверкой на ловкость-&gt;заполнить3]]
 ] (else:) [
 ]
-</tw-passagedata><tw-passagedata pid="36" name="Большой зал: остался один... или" tags="" position="846,1472">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Большой зал: остался один" tags="" position="1046,1476">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="36" name="Большой зал: остался один... или" tags="" position="846,1472">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Большой зал: остался один" tags="" position="1046,1476">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Ударить по щячслу" tags="" position="1128,183">(set: $a to (a: 1,4,5))
+
+(either: 14, ...$a, 800)
+
+(if: $a contains 5)[its ok]
+
+Length of a is (print: $a&#x27;s length)</tw-passagedata><tw-passagedata pid="40" name="Лестница: общее" tags="" position="411,719">(set: $moneyDif to (random: 120, 160))
+На земле валяется (link: &quot;кошелёк&quot;) [кошелёк `[вы забираете: `$moneyDif`$]`. (set:$money to it+$moneyDif)]
+
+С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
