@@ -74,7 +74,9 @@ tw-link
 
 [[Метнуться за инструментом &lt;small&gt;(+практичность)&lt;/small&gt;-&gt;Подвал: молоток против замешательства]]
 
-[[Притаиться за дверью &lt;small&gt;(+скрытность)&lt;/small&gt;-&gt;Подвал: невидимый пленник]]</tw-passagedata><tw-passagedata pid="4" name="Шабло" tags="" position="1114,32">Итог: +стат, +предмет
+[[Притаиться за дверью &lt;small&gt;(+скрытность)&lt;/small&gt;-&gt;Подвал: невидимый пленник]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="4" name="Шабло" tags="" position="1114,32">Итог: +стат, +предмет
 Результат предыдущего
 
 Текущее событие (константа для ряда - одноуровневых событий-альтернатив)
@@ -102,7 +104,9 @@ tw-link
 
 Через некоторое время комната наполняется прохладой и с лестницы сверху плавно спускается &lt;font color=#fffafa&gt;&lt;abbr title=&quot;Приглядевшись, вы видите на его шеё кулон в виде черепа. Похоже, вы попали в лапы к некроманту.&quot;&gt;высокая фигура в черном капюшоне&lt;/abbr&gt;&lt;/font&gt; [тапните для подробной информации]. Щуплые ассистенты почтительно расступаются, а стражник вытягивается по струнке.
 
-Взгляд черных глаз кажется умным и даже немного тёплым, но фигура бормочет: &quot;Ты станешь отличным произведением моего тёмного искусства,&quot; - и плавно вонзает изогнутый ритуальный нож вам в тело. Вы начинаете терять сознание под звуки гулких слов на неизвестном вам языке...</tw-passagedata><tw-passagedata pid="6" name="Подвал: молоток против замешательства" tags="" position="721,559">Итог: +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;
+Взгляд черных глаз кажется умным и даже немного тёплым, но фигура бормочет: &quot;Ты станешь отличным произведением моего тёмного искусства,&quot; - и плавно вонзает изогнутый ритуальный нож вам в тело. Вы начинаете терять сознание под звуки гулких слов на неизвестном вам языке...
+
+&lt;abbr title=&quot;Вы гуль&quot;&gt;(set: $HP to (text-style: &quot;mirror&quot;) + (colour:&quot;green&quot;))$HP[❤]1000/1000&lt;/abbr&gt;</tw-passagedata><tw-passagedata pid="6" name="Подвал: молоток против замешательства" tags="" position="721,559">Итог: +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;
 В ящике вы находите увесистый молоток, как раз в тот момент, когда дверь открывается. На пороге стоит стражник, очень удивленный тем фактом, что вы не только не связаны, но и вооружены. Он хватается за ножны и начинает вытаскивать меч...
 От неожиданности ситуации вы инстинктивно делаете первое, что приходит в голову: кидаете со всей силы молоток стражнику в голову. Меткое попадание.
 
@@ -111,6 +115,7 @@ tw-link
 [[Собрать монеты &lt;small&gt;(+деньги, -время)&lt;/small&gt;-&gt;Лестница: полный мешочек дукатов]]
 
 [[Убираться отсюда-&gt;Лестница: время деньги]]
+
 (display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="7" name="Подвал: невидимый пленник" tags="" position="887,560">Итог: +&lt;font color=&quot;green&quot;&gt;скрытность&lt;/font&gt;
 Вы прячетесь за дверью и задерживаете дыхание от волнения. Дверь открывается и в комнату медленно заходит стражник, бряцая оружием. Он смотрит на веревки на полу и недоуменно почесывает голову инстинктивным движением, не смотря на то, что на его голову надет шлем.
 
@@ -122,7 +127,9 @@ tw-link
 
 [[Оставить без сознания &lt;small&gt;(+милосердие)&lt;/small&gt;-&gt;Лестница: милосердие и беспечность]]
 
-[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to it +(random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+[[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to it +(random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Собрав все монетки до последней и потратив немного времени, вы также прихватываете с собой меч стражника.
 (display: &quot;Лестница: общее&quot;)
@@ -130,6 +137,7 @@ tw-link
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
 [[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
+
 (display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="9" name="Лестница: время деньги" tags="" position="717,714">Итог: +&lt;font color=&quot;orange&quot;&gt;0 монет&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Решив, что жизнь вам важнее горстки монет, вы также прихватываете с собой меч стражника.
@@ -137,7 +145,9 @@ tw-link
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="10" name="Лестница: перед залом с щуплыми людьми" tags="" position="546,879">Итог: -
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="10" name="Лестница: перед залом с щуплыми людьми" tags="" position="546,879">Итог: -
 
 Через замочную скважину вы видите, как две тощие фигуры копошатся вокруг каменного алтаря, стоящего в центре большого зала. Они увлечены своим делом и вряд ли обратят внимание, если зайти тихо.
 
@@ -147,7 +157,9 @@ tw-link
 
 [[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
 
-[[Вломиться в дверь &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]</tw-passagedata><tw-passagedata pid="11" name="Лестница: за дверью от храпящего стражника" tags="" position="723,877">Итог: -
+[[Вломиться в дверь &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="11" name="Лестница: за дверью от храпящего стражника" tags="" position="723,877">Итог: -
 
 Вы прикладываете ухо к двери и отчетливо слышите раскатистое громыхание чьего-то храпа за дверью. Вместе с прерывистыми звуками слышен лязг чего-то металлического, и вы делаете вывод, что спит стражник.
 
@@ -157,7 +169,9 @@ tw-link
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Вломиться в дверь &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]</tw-passagedata><tw-passagedata pid="12" name="Большой зал: не ждали" tags="" position="912,1162">Итог: +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;
+[[Вломиться в дверь &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="12" name="Большой зал: не ждали" tags="" position="912,1162">Итог: +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;
 
 Вы вламываетесь в зал и видите, как две тощие фигуры в центре зала испуганно оглядываются на вас, и одна из них начинает пятиться к лестнице наверх.
 
@@ -165,6 +179,7 @@ tw-link
 
 [[Прикончить стражника пока не поздно-&gt;Большой зал: осталось двое]]
 
+(display: &quot;StatusBar&quot;)
 (if: $false is 1) [
 [[действие-&gt;заполнить2]]
 ] (else:) [
@@ -176,21 +191,27 @@ tw-link
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="14" name="Лестница: милосердие и беспечность" tags="" position="1030,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="14" name="Лестница: милосердие и беспечность" tags="" position="1030,715">Итог: +&lt;font color=&quot;green&quot;&gt;милосердие&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Вы решаете оставить туповатого стражника без сознания: наверняка он просто служит своему господину. Вы также прихватываете с собой меч стражника.
 (display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="15" name="Лестница: жестокость и практичность" tags="" position="1187,722">Итог: +&lt;font color=&quot;green&quot;&gt;жестокость&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;пятна крови на руках и одежде&lt;/font&gt;(set: $blooded to 1), +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt; 
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="15" name="Лестница: жестокость и практичность" tags="" position="1187,722">Итог: +&lt;font color=&quot;green&quot;&gt;жестокость&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;, +&lt;font color=&quot;orange&quot;&gt;пятна крови на руках и одежде&lt;/font&gt;(set: $blooded to 1), +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt; 
 
 Понимая, что это необходимость, вы подходите к лежащему на полу стражнику и вынимаете меч из его ножен. А затем заставляете его навсегда затихнуть. Вы также прихватываете с собой меч стражника.
 (display: &quot;Лестница: общее&quot;)
 
 [[Заглянуть в замочную скважину &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: перед залом с щуплыми людьми]]
 
-[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]</tw-passagedata><tw-passagedata pid="16" name="Большой зал: наблюдательная позиция" tags="" position="548,1020">Итог: +&lt;font color=&quot;green&quot;&gt;интеллект&lt;/font&gt;
+[[Прислушаться, что за дверью &lt;small&gt;(не тратит время)&lt;/small&gt;-&gt;Лестница: за дверью от храпящего стражника]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="16" name="Большой зал: наблюдательная позиция" tags="" position="548,1020">Итог: +&lt;font color=&quot;green&quot;&gt;интеллект&lt;/font&gt;
 
 Вы осторожно заходите в зал, когда две тощие фигуры в центре зала не смотрят в вашу сторону, и они продолжают заниматься своими делами.
 
@@ -200,6 +221,7 @@ tw-link
 
 [[Громко заорать — повинуясь странной силе, вы выходите из себя &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
 
+(display: &quot;StatusBar&quot;)
 (if: $false is 1) [
 [[действие-&gt;заполнить1]]
 ] (else:) [
@@ -213,6 +235,7 @@ tw-link
 
 [[Громко заорать — повинуясь странной силе, вы выходите из себя &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
 
+(display: &quot;StatusBar&quot;)
 (if: $false is 1) [
 [[действие-&gt;заполнить1]]
 ] (else:) [
@@ -284,6 +307,7 @@ $colour[Op Op opopop]
 
 [[Прервать чтение свитка-&gt;Большой зал: остался один]]
 
+(display: &quot;StatusBar&quot;)
 (if: $false is 1) [
 [[Метнуть меч в убегающего с проверкой на ловкость-&gt;заполнить3]]
 ] (else:) [
