@@ -242,14 +242,22 @@ tw-link
 ]</tw-passagedata><tw-passagedata pid="18" name="Untitled Passage" tags="" position="212,235">Учит выбору</tw-passagedata><tw-passagedata pid="19" name="Untitled Passage 1" tags="" position="210,411">Учит итогу разноцветному</tw-passagedata><tw-passagedata pid="20" name="Untitled Passage 2" tags="" position="203,573">Учит осмотру
 </tw-passagedata><tw-passagedata pid="21" name="Untitled Passage 3" tags="" position="202,729">Учит негативным последствиям выбора (оранжевый цвет)</tw-passagedata><tw-passagedata pid="22" name="Untitled Passage 4" tags="" position="67,728">Повтор обучения осмотра
 
-(Добавить награду! Переменную, денег)</tw-passagedata><tw-passagedata pid="23" name="в" tags="" position="1449,409">Выносливость
-Ловкость
+(Добавить награду! Переменную, денег)</tw-passagedata><tw-passagedata pid="23" name="в" tags="" position="1447,407">Выносливость
+Ловкость</tw-passagedata><tw-passagedata pid="24" name="Untitled Passage 5" tags="" position="1441,575">Практичность
+Скрытность</tw-passagedata><tw-passagedata pid="25" name="Untitled Passage 6" tags="" position="1444,719">
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="24" name="Untitled Passage 5" tags="" position="1441,575">Практичность
-Скрытность</tw-passagedata><tw-passagedata pid="25" name="Untitled Passage 6" tags="" position="1444,719">Деньги
-Милосердие-жестокость
-Время
-Практичность-беспечность</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage 7" tags="" position="1454,1078">Восприятие
+|dark&gt;[Практичность-беспечность]
+(click: ?dark)[opop]
+
+(t8n:&quot;dissolve&quot;)[Деньги]
+(t8n:&quot;shudder&quot;)[Милосердие-жестокость]
+(t8n:&quot;pulse&quot;)[Время]
+
+(t8n:&quot;dissolve&quot;)[This macro (and its abbreviation) applies a transition CSS animation to the hook. Some transition names that are available are &quot;dissolve&quot;, &quot;&quot; and &quot;&quot; with more on the way (hopefully). This works well within a hook revealed by the  macro.]
+
+(replace: ?dark)[Brahmaputra]
+
+(link: &quot;Click me!&quot;)[(t8n:&quot;shudder&quot;)[(.) (.)]]</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage 7" tags="" position="1454,1078">Восприятие
 Интеллект
 Беспечность
 Время</tw-passagedata><tw-passagedata pid="27" name="заполнить1" tags="" position="230,1024">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="FancySyntax" tags="" position="1257,31">(set: $money to 276)(set: $currentHP to 8)(set: $maxHP to 10)(set: $exp to 750)(set: $mana to 3)(print: $red)
@@ -353,7 +361,19 @@ $ar
 &quot;shudder&quot;</tw-passagedata><tw-passagedata pid="40" name="Лестница: общее" tags="" position="411,719">(set: $moneyDif to (random: 120, 160))
 На земле валяется (link: &quot;кошелёк&quot;) [кошелёк `[`вы забираете: (colour:&quot;yellow&quot;)[￥]$moneyDif`]`. (set:$money to it+$moneyDif)]
 
-С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?</tw-passagedata></tw-storydata>
+С лестницы есть несколько окошек, выходящих на свежий весенний лес, и вы испытываете облегчение. &lt;font color=#fffafa&gt;&lt;abbr title=&quot;На одном из подоконников вы находите подкову, вот это везение! Удача +1&quot;&gt;Окошки&lt;/abbr&gt;&lt;/font&gt; слишком маленькие, чтобы пролезть, поэтому вы вынуждены двигаться дальше по лестнице. Перед вами дверь. Хотите заглянуть в замочную скважину, прислушаться или сразу зайти?</tw-passagedata><tw-passagedata pid="41" name="Untitled Passage 9" tags="" position="1115,327">&lt;abbr title=&quot;Здоровье&quot;&gt;(set: $HP to (text-style: &quot;fade-in-out&quot;) + (colour:&quot;red&quot;))$HP[❤]$currentHealth/$maxHealth&lt;/abbr&gt; &lt;abbr title=&quot;Богатство&quot;&gt;(colour:&quot;yellow&quot;)[￥]$money&lt;/abbr&gt; &lt;abbr title=&quot;Опыт&quot;&gt;(colour:&quot;cyan&quot;)[★]$exp&lt;/abbr&gt;  &lt;abbr title=&quot;Магия&quot;&gt;☯$mana&lt;/abbr&gt;
+
+(link:&quot;Where is my HP?&quot;)[(append: ?statusbar)[ &lt;abbr title=&quot;Здоровье&quot;&gt;(set: $HP to (text-style: &quot;fade-in-out&quot;) + (colour:&quot;red&quot;))$HP[❤]$currentHealth/$maxHealth&lt;/abbr&gt;]]
+(link:&quot;Where is my money?&quot;)[(append: ?statusbar)[ &lt;abbr title=&quot;Богатство&quot;&gt;(colour:&quot;yellow&quot;)[￥]$money&lt;/abbr&gt;]]
+(link:&quot;Where is my exp?&quot;)[(append: ?statusbar)[ &lt;abbr title=&quot;Опыт&quot;&gt;(colour:&quot;cyan&quot;)[★]$exp&lt;/abbr&gt;]]
+(link:&quot;Where is my mana?&quot;)[(append: ?statusbar)[ &lt;abbr title=&quot;Магия&quot;&gt;mana $mana&lt;/abbr&gt;]]
+|statusbar&gt;[statusbar]
+
+
+(mouseover: ?statusbar)[This is not]
+
+
+(live:100ms)[(if: ?statusbar contains &quot;mana&quot;)[It was mana! (stop:)]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.

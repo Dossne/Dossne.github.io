@@ -8,6 +8,7 @@
 #
 #
 
+
 Достижения:
 * Добавить рандома: деньги
 * Курение документации: нашёл из груды барахла нормальный гайд
@@ -38,6 +39,8 @@
 * Плавный ход первого приключения:
 	- Ввод фичей тутору: 1) знакомство с подсказкой 2) следующий повтор без подсказки с ревардом 3) дальний повтор с ревардом
 		+ 
+* (transition:)/(t8n:): This macro (and its abbreviation) applies a transition CSS animation to the hook. Some transition names that are available are "dissolve", 
+  "shudder" and "pulse" with more on the way (hopefully). This works well within a hook revealed by the (click:) macro.
 * $x.shift() выяснить (move:): This macro behaves like (put:), but it requires both sides of the into expression to be variables, 
   and deletes the left side after copying its value to the right side. In other words, running (move: $x into $y) will change $y to 
   $x's value and delete $x. Its main intended use is with arrays: (move: $x's 1st into $y) will remove the item at index 0 from the 
