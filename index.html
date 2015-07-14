@@ -131,7 +131,7 @@ tw-link
 
 [[Прикончить &lt;small&gt;(+практичность, +жестокость)&lt;/small&gt;-&gt;Лестница: жестокость и практичность]]
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set: $money to it +(random:350,500))Итог: +&lt;font color=&quot;green&quot;&gt;$money монет&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="8" name="Лестница: полный мешочек дукатов" tags="" position="560,718">(set:$moneyDif to (random:350,500))(set:$money to it + $moneyDif)Итог: +(colour:&quot;yellow&quot;)[￥]&lt;font color=&quot;green&quot;&gt;$moneyDif&lt;/font&gt;, -&lt;font color=&quot;orange&quot;&gt;время&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;меч&lt;/font&gt;
 
 Собрав все монетки до последней и потратив немного времени, вы также прихватываете с собой меч стражника.
 (display: &quot;Лестница: общее&quot;)
