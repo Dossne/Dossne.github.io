@@ -43,11 +43,13 @@ tw-link
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
-</script><tw-passagedata pid="1" name="Подвал: на каменном полу" tags="" position="739,147">(set: $currentHealth to 2)(set:$maxHealth to 10)(set:$money to 250)Вы просыпаетесь на каменном полу тусклоосвещенного помещения. Руки и ноги связаны грубой верёвкой, голова болит как от удара тупым предметом.
+
+</script><tw-passagedata pid="1" name="Подвал: на каменном полу" tags="" position="739,147">(set: $currentHealth to 2)(set:$maxHealth to 10)(set:$money to 70)Вы просыпаетесь на каменном полу тусклоосвещенного помещения. Руки и ноги связаны грубой верёвкой, голова болит как от удара тупым предметом.
 Невдалеке стоят стеллажи и верстак, из комнаты ведут две двери. Сначала было бы неплохо выпутать руки.
 
 Вы могли бы поискать инструменты на стеллажах и верстаке, либо попрактиковаться в распутывании узлов.
@@ -173,7 +175,7 @@ tw-link
 
 [[Вломиться в дверь &lt;small&gt;(+беспечность, +время)&lt;/small&gt;-&gt;Большой зал: не ждали]]
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="12" name="Большой зал: не ждали" tags="" position="912,1162">Итог: +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="12" name="Большой зал: не ждали" tags="" position="914,1164">Итог: +&lt;font color=&quot;orange&quot;&gt;беспечность&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;время&lt;/font&gt;
 
 Вы вламываетесь в зал и видите, как две тощие фигуры в центре зала испуганно оглядываются на вас, и одна из них начинает пятиться к лестнице наверх.
 
@@ -305,40 +307,41 @@ $colour[Op Op opopop]
 (click: ?c3)[Only their faint shine keeps them from being seen as grey.]
 (click: ?c4)[Dreadfully heavy, they weigh you down and make dancing arduous.]
 Разраз
-</tw-passagedata><tw-passagedata pid="33" name="StatusBar" tags="" position="1419,27">&lt;abbr title=&quot;Здоровье&quot;&gt;(set: $HP to (text-style: &quot;fade-in-out&quot;) + (colour:&quot;red&quot;))$HP[❤](live:100ms)[$currentHealth/$maxHealth]&lt;/abbr&gt; &lt;abbr title=&quot;Богатство&quot;&gt;(colour:&quot;yellow&quot;)[￥](live:100ms)[$money]&lt;/abbr&gt; &lt;abbr title=&quot;Опыт&quot;&gt;(colour:&quot;cyan&quot;)[★](live:100ms)[$exp]&lt;/abbr&gt;  &lt;abbr title=&quot;Магия&quot;&gt;☯(live:100ms)[$mana]&lt;/abbr&gt;</tw-passagedata><tw-passagedata pid="34" name="заполнить2" tags="" position="1254,1158">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Большой зал: осталось двое" tags="" position="912,1312">Итог: +&lt;font color=&quot;orange&quot;&gt;пятна крови&lt;/font&gt;, +&lt;font color=&quot;green&quot;&gt;ловкость&lt;/font&gt;
-
-Ловким движением вы приканчиваете стражника, который так и не понял, что произошло.
+</tw-passagedata><tw-passagedata pid="33" name="StatusBar" tags="" position="1419,27">&lt;abbr title=&quot;Здоровье&quot;&gt;(set: $HP to (text-style: &quot;fade-in-out&quot;) + (colour:&quot;red&quot;))$HP[❤](live:100ms)[$currentHealth/$maxHealth]&lt;/abbr&gt; &lt;abbr title=&quot;Богатство&quot;&gt;(colour:&quot;yellow&quot;)[￥](live:100ms)[$money]&lt;/abbr&gt; &lt;abbr title=&quot;Опыт&quot;&gt;(colour:&quot;cyan&quot;)[★](live:100ms)[$exp]&lt;/abbr&gt;  &lt;abbr title=&quot;Магия&quot;&gt;☯(live:100ms)[$mana]&lt;/abbr&gt;</tw-passagedata><tw-passagedata pid="34" name="заполнить2" tags="" position="1254,1158">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Большой зал: осталось двое" tags="" position="912,1312">Ловким движением вы приканчиваете стражника, который так и не понял, что произошло.
 
 Вы видите, что один из людей в робах уже почти у лестницы наверх, а второй достал из-за пазухи какой-то свиток и, держа его в дрожащих руках, зачитывает какие-то непонятные слова, боязливо озираясь на вас.
 
 Первый определенно может позвать кого-то на помощь, и если так, то вам не поздоровится. С другой стороны, второй может читать какое-то опасное заклинание.
 
-[[Преследовать убегающего-&gt;Большой зал: остался один... или]]
+[[Преследовать убегающего&lt;small&gt;(+выносливость)&lt;/small&gt;-&gt;Большой зал: остался один... или]]
 
-[[Прервать чтение свитка-&gt;Большой зал: остался один]]
+[[Прервать чтение свитка&lt;small&gt;(+практичность)&lt;/small&gt;-&gt;Большой зал: остался один]]
 
 (display: &quot;StatusBar&quot;)
 (if: $false is 1)[
 [[Метнуть меч в убегающего с проверкой на ловкость-&gt;заполнить3]]
 ] (else:)[
-]
-</tw-passagedata><tw-passagedata pid="36" name="Большой зал: остался один... или" tags="" position="846,1472">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Большой зал: остался один" tags="" position="1046,1476">
-`              ____...------------...____
-         _.-&quot;` /o/__ ____ __ __  __ \o\_`&quot;-._
-       .&#x27;     / /                    \ \     &#x27;.
-       |=====/o/======================\o\=====|
-       |____/_/________..____..________\_\____|
-       /   _/ \_     &lt;_o#\__/#o_&gt;     _/ \_   \
-       \__&lt;o.-.o&gt;_______\####/_______&lt;o.-.o&gt;__/
-        |===\!/========================\!/===|
-        |   |=|          .---.         |=|   |
-        |===|o|=========/     \========|o|===|
-        |   | |         \() ()/        | |   |
-        |===|o|======{&#x27;-.) A (.-&#x27;}=====|o|===|
-        | __/ \__     &#x27;-.\uuu/.-&#x27;    __/ \__ |
-        |&lt;o_   _o&gt;==== .&#x27;.&#x27;^&#x27;.&#x27;.====&lt;o_   _o&gt;|
-        |  _\o/   __  {.&#x27; __  &#x27;.} _   _\o/  _|
-        `&quot;&quot;&quot;&quot;-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;-&quot;&quot;&quot;&quot;`</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Ударить по щячслу" tags="" position="1112,173">(set: $ar to (a: 1,4,5))
+]</tw-passagedata><tw-passagedata pid="36" name="Большой зал: остался один... или" tags="" position="846,1472">Итог: +&lt;font color=&quot;green&quot;&gt;выносливость&lt;/font&gt;
+
+Развив невероятную скорость, вы быстро пересекаете зал. Испуганный до чёртиков человек в робе, не вовремя оглянувшись, спотыкается о ступеньки лестницы и сильно ударяется головой. Похоже, он в отключке.
+
+Второй человек в робе произносит заключительные слова с магического свитка: свиток истлевает у него в руках, а через мгновение сам человек в робе исчезает со неожиданным звуком &quot;чпок!&quot;, оставив после себя небольшое облачко дыма.
+
+[[-&gt;]]
+
+[[-&gt;]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="37" name="Большой зал: остался один" tags="" position="1046,1476">Итог: +&lt;font color=&quot;green&quot;&gt;практичность&lt;/font&gt;
+
+Видя, как одна фигура в робе, спотыкаясь, убегает по лестнице вверх,(set: $oneEscaped to true) вы переключаете своё внимание на человека, читающего магический свиток.
+
+Подбежав к нему и выдернув свиток из рук, вы легким пинком осаживаете его на пол. Свиток в ваших руках начинает обугливаться и истлевает — вероятно, если чтение свитка началось, свиток уже невозможно сохранить.
+
+[[-&gt;]]
+
+[[-&gt;]]
+
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Ударить по щячслу" tags="" position="1112,173">(set: $ar to (a: 1,4,5))
 (move: $ar&#x27;s 1st into $trash)
 $ar
 
