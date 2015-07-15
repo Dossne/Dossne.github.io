@@ -49,16 +49,18 @@ tw-link
 
 
 
-</script><tw-passagedata pid="1" name="Подвал: на каменном полу" tags="" position="739,147">(set: $currentHealth to 2)(set:$maxHealth to 10)(set:$money to 70)Вы просыпаетесь на каменном полу тусклоосвещенного помещения. Руки и ноги связаны грубой верёвкой, голова болит как от удара тупым предметом.
+</script><tw-passagedata pid="1" name="Подвал: на каменном полу" tags="" position="743,147">{(display: &quot;Initialize&quot;)
+}Вы просыпаетесь на каменном полу тусклоосвещенного помещения. Руки и ноги связаны грубой верёвкой, голова болит как от удара тупым предметом.
 Невдалеке стоят стеллажи и верстак, из комнаты ведут две двери. Сначала было бы неплохо выпутать руки.
 
 Вы могли бы поискать инструменты на стеллажах и верстаке, либо попрактиковаться в распутывании узлов.
+
 
 [[Допрыгать до верстака &lt;small&gt;(+выносливость)&lt;/small&gt;-&gt;Подвал: у верстака]]
 
 [[Попытаться выпутать руки &lt;small&gt;(+ловкость)&lt;/small&gt;-&gt;Подвал: руки свободны]]
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="2" name="Подвал: у верстака" tags="" position="707,399">Итог: +&lt;font color=&quot;green&quot;&gt;выносливость&lt;/font&gt;
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="2" name="Подвал: у верстака" tags="" position="707,399">Итог: +$g[выносливость]&lt;/font&gt;
 
 Вы с трудом встаёте на связанные ноги и начинаете прыгать в сторону верстака. Одно неловкое движение - и вы оказываетесь на полу, получив хороший ушиб.
 Тем не менее, вы повторяете попытку и оказываетесь у верстака, где как раз видна подходящая ржавая железка, об которую вы ловко перетираете веревку на руках, а затем освобождаете ноги.
@@ -400,15 +402,24 @@ $ar
 
 (display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="43" name="Большой зал: полезные мелочи" tags="" position="928,1616">(if: $robeConsious &gt; 0)[Человек в робе в состоянии шока смотрит, как вы вытаскиваете из его карманов одну за другой его ценности.] В его карманах вы находите:
 
-Розовое зелье [прочесть этикетку] [выпить] [влить в горло человеку в робе]
+Розовое зелье [прочесть этикетку] [выпить] [попытаться влить в горло человеку в робе]
 
-Светло синее зелье [выпить] [влить в горло человеку в робе] 
+Светло синее зелье [выпить] [попытаться влить в горло человеку в робе] 
 
 Небольшую записку [прочесть] [выкинуть]
 
+Горсть монет [забрать] [выкинуть]
 
 
-Разберитесь со всеми вещами, прежде чем продолжить.</tw-passagedata></tw-storydata>
+
+Разберитесь со всеми вещами, прежде чем продолжить.</tw-passagedata><tw-passagedata pid="44" name="Initialize" tags="" position="489,11">{
+(set: $g to (font: &quot;Skia&quot;) + (color: green) + (text-style: &quot;condense&quot;))
+(set: $o to (font: &quot;Skia&quot;) + (color: orange) + (text-style: &quot;condense&quot;))
+(set: $r to (font: &quot;Skia&quot;) + (color: red) + (text-style: &quot;condense&quot;))
+(set: $currentHealth to 2)
+(set:$maxHealth to 10)
+(set:$money to 70)
+}</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
