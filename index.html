@@ -55,7 +55,6 @@ tw-link
 
 Вы могли бы поискать инструменты на стеллажах и верстаке, либо попрактиковаться в распутывании узлов.
 
-
 [[Допрыгать до верстака &lt;small&gt;(+выносливость)&lt;/small&gt;-&gt;Подвал: у верстака]]
 
 [[Попытаться выпутать руки &lt;small&gt;(+ловкость)&lt;/small&gt;-&gt;Подвал: руки свободны]]
@@ -250,7 +249,7 @@ tw-link
 
 (Добавить награду! Переменную, денег)</tw-passagedata><tw-passagedata pid="23" name="в" tags="" position="1447,407">Выносливость
 Ловкость</tw-passagedata><tw-passagedata pid="24" name="Untitled Passage 5" tags="" position="1441,575">Практичность
-Скрытность</tw-passagedata><tw-passagedata pid="25" name="Untitled Passage 6" tags="" position="1444,719">
+Скрытность</tw-passagedata><tw-passagedata pid="25" name="t8n" tags="" position="1448,719">
 
 |dark&gt;[Практичность-беспечность]
 (click: ?dark)[opop]
@@ -279,7 +278,7 @@ tw-link
 
 (display: &quot;StatusBar&quot;)
 
-(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;, &quot;[[Ударить по щячслу]]&quot;)
+(either: &quot;[[Ударить поддых]]&quot;, &quot;[[Ударить по голове]]&quot;, &quot;[[Ударить по ногам]]&quot;, &quot;[[text-styles]]&quot;)
 
 (set: $heartbeat to 120)
 (set: $breathing to true)
@@ -339,7 +338,7 @@ $colour[Op Op opopop]
 
 [[Обшарить карманы человека в робе-&gt;Большой зал: полезные мелочи]]
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Ударить по щячслу" tags="" position="1112,173">(set: $ar to (a: 1,4,5))
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="38" name="заполнить3" tags="" position="1254,1318">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="text-styles" tags="" position="1112,173">(set: $ar to (a: 1,4,5))
 (move: $ar&#x27;s 1st into $trash)
 $ar
 
@@ -400,26 +399,38 @@ $ar
 (live: 2s)[(if $var is true)[(link: &quot;Get money!&quot;)[(set: $money to it +250)]]]
 
 
-(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="43" name="Большой зал: полезные мелочи" tags="" position="928,1616">(if: $robeConsious &gt; 0)[Человек в робе в состоянии шока смотрит, как вы вытаскиваете из его карманов одну за другой его ценности.] В его карманах вы находите:
+(display: &quot;StatusBar&quot;)</tw-passagedata><tw-passagedata pid="43" name="Большой зал: полезные мелочи" tags="" position="928,1616">{
+(set: $HP_add to (t8n:&quot;pulse&quot;) + (colour:&quot;red&quot;))
+}(if: $robeConsious &gt; 0)[Человек в робе в состоянии шока смотрит, как вы вытаскиваете из его карманов одну за другой его ценности.] В его карманах вы находите:
 
-Розовое зелье [прочесть этикетку] [выпить] [попытаться влить в горло человеку в робе]
-
-Светло синее зелье [выпить] [попытаться влить в горло человеку в робе] 
-
-Небольшую записку [прочесть] [выкинуть]
-
+(colour:&quot;pink&quot;)[Розовое зелье]  [выпить] [налить немного на человека в робе]
+Вы делаете небольшой глоток; вкус кажется приятным. Вы чувствуете себя немного лучше: +$HP_add[❤❤❤]!
+Вы открываете пробку розового зелья и наливаете несколько капель на человека в робе(if: $robeConsious &gt; 0)[, он не сопротивляется]. Вы видете, как небольшая царапина у него на лице затягивается прямо у вас на глазах.
+(colour:&quot;cyan&quot;)[Светло-синее зелье] [выпить] [налить немного на человека в робе] 
+Вы делаете небольшой глоток... Ваше горло схватывает паралич! Вы теряете способность разговаривать. Вы забираете светло синее-зелье с собой.
+{(if: $robeConsious &gt; 0)[Вы открываете пробку светло-синего зелья и пытаетесь налить на чёловека в робе, но тот начинает орать и брыкаться: &quot;Не надо, это для бальзамирования трупов! У живых оно вызывает паралич.&quot;]
+(if: $robeConsious is 0)[Вы открываете пробку светло-синего зелья, и как раз в этот момент он начинает приходить в сознание. Несколько капель зелья попадают ему на лицо, и вы наблюдаете, как его мимические мышцы сводит паралич. Кажется, это зелье парализует. Вы забираете светло-синее зелье с собой.]}
+(colour:&quot;white&quot;)[Небольшую записку] [прочесть] [выкинуть]
+&quot;Пожалуйста, не натыкайтесь на чёрный шар в комнате ловушек! Хоть вы и низкоквалифицированный персонал, мне надоело искать вам замену. Б.&quot;
 Горсть монет [забрать] [выкинуть]
+Там было 240 монет.
 
-
-
-Разберитесь со всеми вещами, прежде чем продолжить.</tw-passagedata><tw-passagedata pid="44" name="Initialize" tags="" position="489,11">{
+Разберитесь со всеми вещами, прежде чем продолжить.
+{
+(set: $v1 to 0)
+(set: $v2 to 0)
+(set: $v3 to 0)
+(live: 1s)[(set: $canPass to $v1 * $v2 * $v3)(if: $canPass &gt; 0)[[[Двигаться дальше-&gt;Гостиная]]]]
+(display: &quot;StatusBar&quot;)
+}
+</tw-passagedata><tw-passagedata pid="44" name="Initialize" tags="" position="489,11">{
 (set: $g to (font: &quot;Skia&quot;) + (color: green) + (text-style: &quot;condense&quot;))
 (set: $o to (font: &quot;Skia&quot;) + (color: orange) + (text-style: &quot;condense&quot;))
 (set: $r to (font: &quot;Skia&quot;) + (color: red) + (text-style: &quot;condense&quot;))
 (set: $currentHealth to 2)
 (set:$maxHealth to 10)
 (set:$money to 70)
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="45" name="Гостиная" tags="" position="928,1766">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
