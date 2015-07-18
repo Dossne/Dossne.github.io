@@ -499,7 +499,7 @@ $ar
 
 
 
-[[Отойти от стола-&gt;Верхняя башня: лаборатория]]</tw-passagedata><tw-passagedata pid="49" name="Кабинет" tags="" position="918,2224">%%%Большой стол, пюпитр, скелет демона (образец).
+[[Отойти от стола-&gt;Верхняя башня: лаборатория]]</tw-passagedata><tw-passagedata pid="49" name="Кабинет" tags="" position="920,2222">%%%Большой стол, пюпитр, скелет демона (образец).
 
 Есть еще дверь, но вряд ли вас туда кто-то пустит.
 
@@ -509,7 +509,13 @@ $ar
 
 (ИЗ ГУЛИФИКАЦИИ 2) Взгляд черных глаз кажется умным и даже немного тёплым, но фигура бормочет: &quot;Ты станешь отличным произведением моего тёмного искусства,&quot; - и плавно вонзает изогнутый ритуальный нож вам в тело. Вы начинаете терять сознание под звуки гулких слов на неизвестном вам языке...
 
-(display: &quot;StatusBar&quot;)</tw-passagedata></tw-storydata>
+(display: &quot;StatusBar&quot;)
+
+
+(if: $false is 1)[
+[[Отправиться на поиски приключений-&gt;%%%Спасибо за игру!]]
+] (else:)[
+]</tw-passagedata><tw-passagedata pid="50" name="%%%Спасибо за игру!" tags="" position="920,2372">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
